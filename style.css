@@ -8,24 +8,87 @@
 
 :root {
   font-size: 62.5%;
-}
-
-.light {
-  --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.1);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(0, 0, 0, 0.2);
-  --switch-bg-url: url(./assets/Sun.svg);
+  --background-color: #573824;
+  --surface-color: #f0e8c2;
+  --text-color-primary: #291b1a;
+  --text-color-secondary: #573a37;
+  --text-color-on-bg: #f0e8c2;
 }
 
 body {
   font-family: "Alice", sans-serif;
   font-size: 1.6rem;
-  background-image: url(./assets/bg.jpg);
+  background: url(./assets/bg.jpg) center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page {
+  padding: 24px;
+  background: var(--surface-color);
+  margin: 48px auto 28px;
+  width: 800px;
+  border-radius: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 24px;
+}
+
+h1,
+h2 {
+  color: var(--text-color-primary);
+}
+
+p,
+ul {
+  color: var(--text-color-secondary);
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#about h1 {
+  margin-bottom: 4px;
+  font-size: 40px;
+}
+
+#ingredients h2 {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+#ingredients ul {
+  padding-left: 24px;
+}
+
+#preparation {
+  display: flex;
+  flex-direction: column;
+}
+
+#preparation h2 {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 img {
   border-radius: 16px;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+footer p {
+  color: var(--text-color-on-bg);
 }
